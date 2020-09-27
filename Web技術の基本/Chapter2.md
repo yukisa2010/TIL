@@ -68,10 +68,22 @@
   - 複数のDNSサーバーが階層構造で分散処理を行ってドメイン<>IP変換を行う
   - 同じDNSについて問い合わせが発生した場合、DNSキャッシュサーバー
 
+## HTTP
+1. request
+2. WebServerがrequestを解析
+3. Browserへresponse
+4. Browserで表示
+- ※request/responseでHTTP通信は使われる
+
+- データの流れ
+  - TCPヘッダー
+  - IPヘッダー
+  - イーサネットヘッダー
+    
+- IPv4 & IPv6
+  - IPアドレスの数
 
 
-    
-    
     
     
     
