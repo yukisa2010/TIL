@@ -26,5 +26,5 @@
 
 ## メディアタイプ
 - headタグの中にメディアタイプごとの設定を記述
-  - "<link rel="stylesheet" media="print">"
+  - \<link rel="stylesheet" media="print"\>
 
