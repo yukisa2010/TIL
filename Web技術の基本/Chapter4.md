@@ -22,3 +22,11 @@
 - 配信方法 >> ダウンロードとプログレッシブダウンロード
 - ストリーミング配信
   - 細切れに配信・再生されたデータは都度削除
+  - ストリーミングサーバーが必要
+
+## メディアタイプ
+- headタグの中にメディアタイプごとの設定を記述
+  - <link rel="stylesheet" media="print">
+  - <link rel="stylesheet" media="screen">
+  - <link rel="stylesheet" media="all">
+
