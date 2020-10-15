@@ -43,4 +43,34 @@ ssh-server接続
 - viエディター
     - Command ModeとInsert Mode
     - kで↑、jで↓
-    
+- ls
+    - -aで隠しファイル表示
+    - -lで詳細情報表示(rw)
+    - -iでファイルのインデックス
+- clear
+    - 画面のクリア
+- file
+    - どういう種類のファイルなのかかくにんできる
+- dd
+    - 「dd if=ファイル1 of=ファイル2」でファイル1をファイル2にコピーできます。
+- cp
+    - copy A B　AをBと言う名前でコピー
+- mv
+    - 移動
+    - リネーム
+    - フォルダ名のみで省略もできる
+        - ex) mv hello.txt src/
+- rm
+    - 削除
+    - rm -fR フォルダごと削除
+- find
+    - 特定のディレクトリにファイルがあるか、どこに位置しているか
+    - find . --name searchword
+    - sudo
+- tar
+    - -f /ファイル名
+    - -c create
+    - -x extract(展開)
+    - -r 末尾に追加
+    - -v verbose(詳細を表示/圧縮の経過)
+    - -j bzip/ -z gzip
