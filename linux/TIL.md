@@ -63,6 +63,8 @@ ssh-server接続
 - rm
     - 削除
     - rm -fR フォルダごと削除
+    - rm -rd 上記と同様
+    - -r recursive /-d directory
 - find
     - 特定のディレクトリにファイルがあるか、どこに位置しているか
     - find . --name searchword
@@ -102,6 +104,56 @@ ssh-server接続
         - ln A B
     - シンボリックリンク => ショートカットみたいなもの
         - ln -s A B
+- cut
+    - cut -d: -f1,6 passwd
+    - => delimeter(区切文字は「:」), fieldは1,6番目を抜き出し
+    - 対象文字列 A:B:C:D...
 
+### 正規表現
+### ジョブとタスク
+- 「ls -l | more」 はジョブ
+- 「ls -l」「more」はタスク
+- ps PIDの確認
+    - ps au => 全てのユーザーが使用しているプロセスも確認
+    - ps aux => dbサーバーなど、端末を持たないもの常時起動のプロセス(daemon?)も確認できる
+- top => 消費量
+    - q コマンドで終了
 
+> 上記、ps, topコマンドを利用して、メモリ増設などを検討
+- !ssh サーバー接続
+    - Windowsで試す
+
+- uptime
+    - このプロセスをいつ起動したか
+- free
+    - memoryの空きなど
+- kill
+    - kill -9 [プロセス番号]
+    - シグナル名
+        - kill -SIGKILL [プロセス番号]
+- fore-ground & back-ground
+    - fore >> vi test.txt
+        - fg PID コマンド
+    - back >> tail test.txt & 
+        - bg PID コマンド
+
+## ユーザー管理
+- /etc/passwd
+    - ユーザー名:パスワード(x):UserID:GroupID:GECOS(Comment):home directory:default shell
+        - パスワードはshadowファイルで管理
+        - /etc/shadow
+- アクセス許可・パーミッション
+    - r > read / w > write / x > execute
+    - ls -la
+        - drwxrwxrwx Username Groupname
+        - ->先頭 d > directoryかどうか
+        - 最初のrwx > ownerの権限
+        - 次のrwx > ownerと同じグループ所属の権限
+        - 最後のrwx > other その他
+- chown root:root a.txt
+    - a.txtをrootユーザー権限のファイルにする
+        - -> UserName, GroupNameが変わる
+        - ownerを変更する
+- chmod o+w a.txt
+    - owner に対し、a.txtを対象として、 write(w)の権限を付与する
 
