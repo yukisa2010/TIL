@@ -95,8 +95,13 @@ ssh-server接続
         - cpio -o < filelist.txt > files.cpio
     - insert mode
     - copypath mode
-        - 
-
+        - cpio copyto -pd < filelist.txt
+        - ファイル内に記載されたファイルを移動する
+- ln
+    - ハードリンク => コピーに近い。同じiノードを使用する
+        - ln A B
+    - シンボリックリンク => ショートカットみたいなもの
+        - ln -s A B
 
 
 
