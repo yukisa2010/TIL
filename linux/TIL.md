@@ -157,3 +157,97 @@ ssh-server接続
 - chmod o+w a.txt
     - owner に対し、a.txtを対象として、 write(w)の権限を付与する
 
+# パッケージ管理
+- フロントエンド
+    - 外部リポジトリからパッケージ取得
+    - APT(Advanced Package Tool)
+        - apt-get
+        - apt-get install  
+    - YUM(yum) YellowData Update Modified
+- パッケージ管理ツール
+    - rpm
+        - RedHat Package Manager
+    - dpkg
+        - Debian系
+
+## chromeのダウンロード・インストール
+- webから通常ダウンロード
+- sudo dpkg -i chrome...
+    - install, but pkg足りない
+    - sudo apt-get install A
+
+# ジョブスケジューリング
+- crontab -e > 自動実行の一覧
+
+# ファイルシステム
+- df (disk free)
+    - 空き容量の確認
+    - -h GB,MBで表示
+- du (disk usage)
+    - 使用量の確認
+    - directoryの容量など見ることができる
+- fsck(file system check)
+    - df -T でext系かどうか確認
+- debugfs
+    - デバッグモード
+    - q or quitで終了
+- tune2fs
+- xfsinfo
+    - XFS管理ツール
+    - CentOS
+# クォータ制御
+- ユーザーが使えるDisk領域の制御
+    - {ハードリミットとソフトリミット} x {ユーザー単位・グループ単位}
+    - 猶予期間(soft >>> hard)
+- 設定
+    - /etc/fstab user,group単位、指定してマウント
+    - fstab = file system table
+    - edquota
+        - -u/-g/-t ユーザー・グループ・期間
+- quotacheck(初期化)
+    - -b backup
+    - -c create new
+    - -v detail view
+- quotaon/off
+# FHS(File Hierarchy Standard)
+## ファイルシステム標準
+- /
+- /bin > 実行形式のファイル
+- /sbin > システム管理関係の実行ファイル
+- /lib > library
+- /var > 変化する ex)logなど
+- /etc > システムの共通設定など
+- /dev > device
+- /tmp > 一時情報・sessionなど
+- /boot > 起動時に使う
+- /proc > process
+- /usr > システムユーザーが独自に入れたものapplication
+    - /usr/share/man > manual保管場所
+    - /usr/src > kernel source > rebuildに使用
+    - /usr/local
+        - /bin ユーザーが独自に追加したもの
+        - /sbin システム管理コマンド
+- /home > user home directory
+- /root > 特権ユーザのhome directory
+- /mnt > --mount CD ROM/SD/DVDなどを一時的にマウントするための
+- /media > CD
+- /opt option application
+- /srv system関係の一時ファイル
+
+# command
+- locate
+    - dbから検索
+    - updatedb > 前提として実行の必要
+- whereis
+    - whereis コマンド名 >> マニュアルの場所や実行ファイルの場所など
+    - -b > binary
+    - -m > manual
+    - -s > source
+- which
+    - PATHの探索
+    - 組み込みコマンドには無効
+- type
+    - PATHの探索
+
+# TerraTerm
+- Windows
