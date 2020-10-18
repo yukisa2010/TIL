@@ -234,7 +234,7 @@ ssh-server接続
 - /opt option application
 - /srv system関係の一時ファイル
 
-# command
+# 検索系コマンド
 - locate
     - dbから検索
     - updatedb > 前提として実行の必要
@@ -251,3 +251,31 @@ ssh-server接続
 
 # TerraTerm
 - Windows
+
+# bash構成ファイル
+- 読み込み順序(基本)
+    1. profile
+    2. bashrc
+    - etc > ~ > etc
+- /etc/profile > シェルの基本設定
+- /etc/bashrc or /etc/bash.bashrc> bash起動毎に実行
+- ~/.bashrc > シェル毎の設定
+- ~/.bash_login .bash_logout ~/.bash_profile ~/.profile > ログイン・ログアウト時に実行
+## スケルトンファイル
+- ユーザーごとの設定・ログインログアウト時の処理など
+- /etc/skel/.profile
+# シェルスクリプト
+- #! > シーバン
+    - コマンドへのフルパス
+- #コメント
+- 実行方法
+    - bash sample.sh
+    - sample.sh
+        - ただし、通常だと実行権限がないので、以下を実行して実行権限を付与する
+        - ls -l sample.sh > 実行権限確認
+        - chmod +x sample.sh
+        - 実行 > ./sample.sh ※./の記述重要
+    - source sample.sh
+    - . sample.sh
+# localization
+env > LANG=...
