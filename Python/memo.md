@@ -462,4 +462,11 @@ class Post(models.Model):
 >- model.py でreverse_lazyを使っている流れは謎
 
 
-## Form
+# Djangoの流れ
+- request objectの作成
+- urls.pyをみて該当の処理を探す(>views.py)
+    - include('~.urls') >> 該当箇所のファイルを見に行く
+- その処理をrequest objectに引数を渡して呼び出す
+- 呼び出した処理からHTTPResponseオブジェクトを受け取る
+- HTTPResponseオブジェクトをブラウザへ返す
+
