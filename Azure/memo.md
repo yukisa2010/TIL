@@ -68,7 +68,30 @@ English > JPN > Imaginized > instance
   - バックエンドプール
   - 正常性プローブ
   - 負荷分散規則
-  
+  - NA規則 > Port番号でRDPを起動
+
+# Storage
+## AzureStorageの種類
+- Blob > テキストデータ・音声データなど
+  - オブジェクトストレージ
+- File > よくあるファイルストレージ
+- Table > キーバリュー型・リレーションは無し
+- Que > ノード間の非同期通信
+
+## Blobについて
+### Blobストレージの構成
+- ストレージアカウント
+  - コンテナー
+    - Blob
+
+# Azure Storage Explorer
+- Azure Storage Explorerで検索 > インストール
+- ドラッグ＆ドロップで保存
+- ストレージアカウントから参照・編集
+- ※フォルダ内にファイルが入っていないと無効化される
+
+
+
 
 
 ## まとめ
