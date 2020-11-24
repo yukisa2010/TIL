@@ -84,13 +84,16 @@ English > JPN > Imaginized > instance
   - コンテナー
     - Blob
 
-# Azure Storage Explorer
+## Azure Storage Explorer
 - Azure Storage Explorerで検索 > インストール
 - ドラッグ＆ドロップで保存
 - ストレージアカウントから参照・編集
 - ※フォルダ内にファイルが入っていないと無効化される
 
+## VMScale 
+VMと過負荷バランスなどを自動で作成してくれる
 
+## 
 
 
 
@@ -101,3 +104,6 @@ English > JPN > Imaginized > instance
 
 - => NetworkWatcherRG
 
+## Tips 2020/11/24
+- NSG
+  - ICMPはデフォルトで許可されていない
