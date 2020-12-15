@@ -13,3 +13,25 @@
     root 'home#index'
 ```
 
+### バリデーションはモデルに付与する 
+- model
+```Ruby
+    class XXX
+        validates :name, presence: true
+    end
+
+```
+### テーブルを作成
+- terminal
+```
+    # for example
+    bin/rails g migration create_table
+```
+
+### serverを再起動する
+- migrationした時
+- gemをインストールした時
+- config変えたとき
+
+
+### test
