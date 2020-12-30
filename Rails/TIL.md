@@ -35,3 +35,27 @@
 
 
 ### test
+
+```Ruby
+# 正しいこと
+assert xxxx
+# 正しくないこと
+assert_not xxx
+# 等しいこと
+assert_equal xxx, xxx
+```
+
+
+## validates
+
+```Ruby
+class User
+  # passwordのハッシュ化
+  # ハッシュ化=暗号化
+  has_secure_password
+
+  # パスワードの入力必須、最小値：6文字
+  validates :password, presence:true, length: {minimum: 6}
+end
+```
+
