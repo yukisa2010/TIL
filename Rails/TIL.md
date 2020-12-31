@@ -59,3 +59,20 @@ class User
 end
 ```
 
+## views
+
+```Ruby
+# 開発環境でのみ表示
+<%= debug(params) if Rails.env.development? %>
+```
+
+## SSL
+### https
+
+<config/environments/production.rb>
+```Ruby
+ # Force all access to the app over SSL, use Strict-Transport-Security,
+  # and use secure cookies.
+  config.force_ssl = true
+```
+
