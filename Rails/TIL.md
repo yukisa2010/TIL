@@ -76,3 +76,24 @@ end
   config.force_ssl = true
 ```
 
+# ログイン
+## 概要
+1. ユーザー登録
+1. パスワードのハッシュ化
+1. sessionコントローラの作成
+1. ログイン画面の作成
+1. login(new, create)/logoutの実装
+
+## session
+- newアクションで作成
+    - ```rails generate controller Sessions new```
+- formで送信される値：
+    - ```params[:session][:email]``
+- Sessionsアクション
+    - new >> ログインページの表示
+    - create
+        - ユーザー情報のpost >> セッション変数への代入
+        - セッションの作成
+        - すなわち、ログイン
+    - destroy
+        - ログアウト
