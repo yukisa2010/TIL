@@ -62,6 +62,7 @@ end
 ## views
 
 ```Ruby
+# ---重要----
 # 開発環境でのみ表示
 <%= debug(params) if Rails.env.development? %>
 ```
@@ -83,6 +84,8 @@ end
 1. sessionコントローラの作成
 1. ログイン画面の作成
 1. login(new, create)/logoutの実装
+1. ユーザーのログインが失敗の場合の実装
+
 
 ## session
 - newアクションで作成
@@ -97,3 +100,26 @@ end
         - すなわち、ログイン
     - destroy
         - ログアウト
+
+- SessionsHelperの読み込み
+    - Sessionの追加
+        - <app/controllers/application_controller.rb>
+        - ```Ruby
+            class ApplicationController < ActionController::Base
+                include SessionsHelper
+            end
+            ```
+    - Helper内
+        - <app/helpers/sessions_helper.rb>
+        - ```Ruby
+            module SessionsHelper            
+                # 渡されたユーザーでログインする
+                def log_in(user)
+                    session[:user_id] = user.id
+                end
+            end
+            ```
+## cookiesのかくにん方法
+1. 開発コンソールでApplicationを選択
+1. かくにん方法、求めらているかくにんについて質問
+
