@@ -279,3 +279,9 @@ ssh-server接続
     - . sample.sh
 # localization
 env > LANG=...
+
+
+## VSCODE Terminalタブのリネーム
+
+Command + Shift + P
+> Terminal Rename
