@@ -123,3 +123,26 @@ end
 1. 開発コンソールでApplicationを選択
 1. かくにん方法、求めらているかくにんについて質問
 
+## ログインの実装・フィールド名について
+- User class
+    - remember()
+    - remember_token: 仮想的なフィールドめい（passwordと同じく）
+    - remember_digest: 上記のトークンを暗号化したもの。
+
+## ログインの仕組み（セッション）
+
+- frondend
+    - cookies >> user_id と　remember_tokenを保存
+- backend
+    - session >> 
+        - 仮想フィールド：remember_token
+        - 実フィールド：remember_digest
+            - remember()メソッドにより、remember_tokenを暗号化したものが入る
+1. ログイン実行時にtokenが作成される >> 仮想フィールドとして存在
+> remember meの実装
+1. remember()メソッドの実行
+    - remember_tokenから作成したremember_digestがテーブルに保存される
+    - cookiesにもremember_tokenを保持
+> 呼び出し時
+1. テーブル保持のremember_digestとcookiesのremember_tokenを用いて暗号化を解除
+    - ※「==」は再定義されている
