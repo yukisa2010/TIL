@@ -16,4 +16,17 @@ $ git checkout master
 $ git branch -D topic-branch
 ```
 
+# git rm
+```linux
+$ git rm
+```
+ワーキングツリー、インデックスから対象のファイルを削除する
+# git fetch
+対象のファイルをローカルリポジトリにfetch
+
+ワーキングツリー > インデックス > FETCH_HEAD
+
+
+
+
 
