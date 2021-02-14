@@ -26,7 +26,19 @@ $ git rm
 
 ワーキングツリー > インデックス > FETCH_HEAD
 
+# git reset 
+## --hard HEAD^
+直前のコミットの打ち消し
+
+## --soft
 
 
+# git reset HEAD .
+ステージングしたファイルを全てアンステージ
 
 
+# コンフリクト
+merge > コンフリクト発生 > 修正 > commit 
+
+# fork
+# git pull
