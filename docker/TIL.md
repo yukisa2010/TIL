@@ -11,7 +11,7 @@
 - DNS
     - ドメイン<　相互変換　>IPアドレス
 
-
+## docker実行
 - docker run docker/whalesay cowsay Hello!
     - 吹き出しのアスキーアートを表示
 - docker images
@@ -33,5 +33,17 @@
     - `FROM` => 元となるDockerイメージ
     - `RUN` => 実行するコマンド
     - `CMD`
+- docker build --no-cache -t docker-whale .
+    - ノーキャッシュで実行
+
+## Docker　push
+- Docker Hubからリポジトリ作成
+- docker tag docker-whale yukisa2010/docker-whale:ver1
+- docker login
+- docker push yukisa2010/docker-whale:ver1
+## docker pull
+- docker pull yukisa2010/docker-whale:ver1
 
 
+ip確認
+- docker-machine ip default
