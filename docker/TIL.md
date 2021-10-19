@@ -44,6 +44,18 @@
 ## docker pull
 - docker pull yukisa2010/docker-whale:ver1
 
-
 ip確認
 - docker-machine ip default
+
+- docker run --name test-nginx -d -p 8080:80 nginx
+    - --name => コンテナに名前をつける
+    - -d => デタッチモード(BackGroundで起動)
+    - -p => ポート番号の指定 ホストOS : docker内部
+
+### バインドマウント
+- docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+    - -v => volume
+        - -v <Host directory> : <docker container pos> : <option>
+            - <option>: ro => readonly /つけなくても動作する
+
+
