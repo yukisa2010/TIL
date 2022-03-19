@@ -285,3 +285,14 @@ env > LANG=...
 
 Command + Shift + P
 > Terminal Rename
+
+
+# eval
+- eval echo hello
+    - echo helloを実行。
+    - 変数内にコマンドを入れて、入れ子構造で実行することができる
+
+# sed
+- find . -type f | xargs sed -i '' 's/置換前/置換後文字列/g'
+    - 対象のファイルの文字列を全て置換
+    - LC_CTYPE=C

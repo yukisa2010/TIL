@@ -59,3 +59,43 @@ ip確認
             - <option>: ro => readonly /つけなくても動作する
 
 
+- docker create --name <name> -it apline /bin/sh
+    - -i　双方向接続
+    - -t コンテナ内にttyを割り当てる
+
+- docker run
+    - create => start
+- docker pause
+- docker unpause
+- docker stop
+
+- docker exec -it <name> /bin/bash
+ - docker内のターミナルに接続する
+
+- docker commit <name> <イメージ名>:<タグ名>
+ - コンテナを修正して作成
+
+- docker attach
+    - 接続
+- docker attach --link
+
+# リバースプロキシ
+static-pageとreverse-proxyの二つを起動
+reverse-proxyへ設定ファイルを配置
+static-pageにはAUTHORの環境変数を設定
+    http://ss => SS_から始まる環境変数が作成されている
+    env | grep SS_で確認
+
+    cat /etc/hosts
+
+# docker-machine
+- docker-machine ssh default
+- docker-machine ip default
+    - dockerホストのip確認
+    - 表示されるip 000.000.00.000:8000でブラウザアクセス
+
+# aws
+- プロビジョニングできる
+- IAM
+
+
